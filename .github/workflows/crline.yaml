@@ -25,8 +25,8 @@ jobs:
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
       - run: |
-          docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/game-2048:${{ github.sha }}
-          docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/game-2048:${{ github.sha }}
+          docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/game-2048:${{ github.run_number }}
+          docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/game-2048:${{ github.run_number }}
       # - name: Docker Setup Docker
       #   uses: docker/setup-docker-action@v4.3.0
 
