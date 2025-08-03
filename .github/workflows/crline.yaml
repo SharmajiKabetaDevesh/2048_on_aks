@@ -43,8 +43,8 @@ jobs:
     
       #    password: ${{secrets.DOCKER_PASSWORD}}
 
-      - name: push to hub
-        run: docker push devesh77388/game-2048:${{github.run_number}}
+      # - name: push to hub
+      #   run: docker push devesh77388/game-2048:${{github.run_number}}
     
 
 
