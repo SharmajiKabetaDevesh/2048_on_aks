@@ -23,7 +23,7 @@ jobs:
       - name: Set up Docker tag
         run: echo "BUILD_TAG=build-${GITHUB_RUN_NUMBER}" >> $GITHUB_ENV
       - name: Build the image
-        run: docker build -t devesh77388/game-2048:${{BUILD_TAG}} .
+        run: docker build -t devesh77388/game-2048:${{env.BUILD_TAG}} .
 
       - name: Docker Login
         uses: docker/login-action@v3.4.0
