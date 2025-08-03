@@ -20,7 +20,7 @@ jobs:
       - name: docker version
         run: docker --version
       - name: print variable
-        run: echo ${{github.runner}}
+        run: echo ${{github.run_number}}
       
       - name: Build the image
         run: docker build -t devesh77388/game-2048:latest .
